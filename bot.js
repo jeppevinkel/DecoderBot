@@ -7,6 +7,7 @@ var base32 = require('thirty-two');
 var morse = require('morse');
 var wordlist = require('wordlist-english');
 var http = require('http');
+const child = require('child_process');
 
 logger.remove(logger.transports.Console);
 logger.add(new logger.transports.Console, {
@@ -235,6 +236,22 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     to: channelID,
                     message: output
                 });
+                break;
+            case 'restart':
+                var output = "User: <@!" + userID + "> requested a bot restart!";
+                bot.sendMessage({
+                    to: channelID,
+                    message: output
+                });
+
+                child.exec('sh ' + require.resolve('../bin/restart.sh'), (err, out, stderr) => {
+                    if (err) {
+                      console.log('Error Restarting Bot')
+                      console.log('userID')
+                      console.log(err, stderr)
+                    } else {
+                      console.log('Restart succedded.')
+                    }
                 break;
             case 'You':
                 if (userID == 531971295961808945) {
