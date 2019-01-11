@@ -244,7 +244,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: output
                 });
 
-                child.exec('sh ' + require.resolve('../bin/restart.sh'), (err, out, stderr) => {
+                child.exec('sh ' + require.resolve('./bin/restart.sh'), (err, out, stderr) => {
                     if (err) {
                       console.log('Error Restarting Bot')
                       console.log('userID')
