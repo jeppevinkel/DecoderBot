@@ -1,6 +1,6 @@
 var Discord = require('discord.io');
 var logger = require('winston');
-var auth = require('./auth.json');
+var auth = require('./tokens/disc_token.json');
 var atob = require('atob');
 var btoa = require('btoa');
 var base32 = require('thirty-two');
