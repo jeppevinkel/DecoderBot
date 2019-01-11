@@ -1,0 +1,16 @@
+{
+  "name": "Decoder",
+  "version": "1.0.0",
+  "description": "Decoder Bot",
+  "main": "bot.js",
+  "author": "Jopo",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "morse": "^0.1.0",
+    "thirty-two": "^1.0.2",
+    "winston": "^3.1.0",
+    "wordlist-english": "^1.2.1"
+  }
+}
