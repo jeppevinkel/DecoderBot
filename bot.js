@@ -252,6 +252,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     } else {
                       console.log('Restart succedded.')
                     }
+                })
                 break;
             case 'You':
                 if (userID == 531971295961808945) {
