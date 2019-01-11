@@ -5,7 +5,7 @@ A Discord bot designed to help with decoding and encoding of different types
 
 # Installation
 * Extract the git project
-* Install requirements
+* Install package.json
 * create a file in /tokens/disc_token.json with the following template:
 ```json
 {
